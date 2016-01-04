@@ -1,0 +1,19 @@
+ var dialogs  = ["hey!! ssup?", "oh okay", "nothing much at my end", "btw check out this standup comedy by Biswa https://www.youtube.com/watch?v=wkLmfIxi3No " , "kk", "ahaan", "dude, wait, I will brb", "gotta go, catch you later, bbye :) "];
+    var chatBox  = document.getElementsByName("message_body")[0];
+    var replyBut = document.getElementById("u_0_x");
+    var diaNum=0; 
+
+    var chitInt   = setInterval(function() {
+        chatBox.classList.remove("DOMControl_placeholder")
+        chatBox.value = dialogs[diaNum] ;
+     
+        getEventListeners(chatBox).paste[0].listener();
+     
+        setTimeout(function(){
+            replyBut.click();
+        }, 4000);
+        diaNum=diaNum+1;
+      if (diaNum == 10) {
+    clearInterval(chitInt);
+  }
+    }, 45000);
