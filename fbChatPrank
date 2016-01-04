@@ -10,7 +10,7 @@
             replyBut.click();
         }, 4000);
         diaNum=diaNum+1;
-      if (diaNum == 10) {
+      if (diaNum == 8) {
     clearInterval(chitInt);
   }
     }, 45000);
